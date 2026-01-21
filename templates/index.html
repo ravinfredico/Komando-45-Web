@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Komando'45 — Home</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: '#6d1a1a',
+              'primary-dark': '#a02c2c',
+              gold: '#e6c177',
+              'brand-bg': '#181112',
+              'card-bg': '#3a2323',
+              muted: '#f5e9e0',
+            }
+          }
+        }
+      }
+    </script>
+    <link rel="stylesheet" href="static/css/style.css"> <!-- Keep for preloader/GSAP base styles -->
+  </head>
+  <body class="bg-brand-bg text-muted">
+  <!-- Preloader -->
+  <script>document.documentElement.classList.add('preload-ready');</script>
+  <div class="preloader">
+      <div class="preloader-inner">
+        <div class="logo">
+          <img src="static/images/Komando.svg" alt="Komando45 logo" class="preloader-logo">
+          <div class="brand-text">Komando'45</div>
+        </div>
+        <!-- Splash text for the animation -->
+        <div class="splash-text">Komando'45</div>
+      </div>
+      <noscript>
+        <style>
+          .preloader { display: none !important; }
+        </style>
+      </noscript>
+    </div>
+
+
+    <!-- Dark Red/Gold Navbar with Animated Center -->
+    <nav class="bg-gradient-to-r from-primary to-primary-dark shadow-lg sticky top-0 z-50" id="mainNavbar">
+      <div class="container mx-auto px-4">
+        <div class="flex justify-between items-center py-2">
+          <a class="flex items-center gap-2 text-gold text-xl font-bold tracking-widest" href="index.html">
+            <img src="static/images/Komando.svg" alt="Komando45 logo" id="navbarLogoAnim" class="h-9 transition-all duration-400">
+          <span id="navbarTextAnim" class="navbar-text-anim" style="display:none;">KOMANDO'45</span>
+          </a>
+          <div class="hidden md:flex items-center space-x-4">
+            <a class="text-gold font-semibold tracking-wide hover:text-white" href="index.html">Home</a>
+            <a class="text-gold font-semibold tracking-wide hover:text-white" href="about.html">About</a></li>
+            <a class="text-gold font-semibold tracking-wide hover:text-white" href="contact.html">Contact</a></li>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <main class="story-container">
+      <!-- Chapter: Introduction -->
+      <section id="intro" class="chapter hero min-h-screen flex items-center justify-center text-center">
+        <div class="content max-w-4xl mx-auto px-4">
+          <h1 class="text-5xl md:text-7xl font-bold mb-3 text-gold" style="text-shadow:0 4px 32px #6d1a1a;">KOMANDO'45</h1>
+          <p class="text-lg md:text-xl text-muted max-w-3xl mx-auto">Menjadi wadah bagi mahasiswa Indonesia untuk berinteraksi, berkolaborasi, dan berkontribusi di Taylor's University.</p>
+          <a class="inline-block mt-4 px-8 py-3 text-lg font-semibold text-gold border-2 border-gold bg-gradient-to-r from-primary to-primary-dark hover:bg-gradient-to-l" href="contact.html">Bergabung Dengan Kami</a>
+        </div>
+      </section>
+
+      <!-- Chapter: What we do -->
+      <section id="what-we-do" class="chapter min-h-screen flex items-center justify-center" style="background:linear-gradient(180deg, rgba(24,17,18,0.6), rgba(40,22,22,0.6));">
+        <div class="content container mx-auto text-center px-4">
+          <h2 class="text-4xl font-bold mb-3 text-gold">Apa yang Kami Lakukan</h2>
+          <p class="text-lg text-muted">Kami menyelenggarakan kegiatan pengembangan diri, workshop karir, acara budaya, dan kegiatan sosial untuk mempererat persaudaraan antar mahasiswa Indonesia di Taylor's University.</p>
+        </div>
+      </section>
+
+      <!-- Chapter: Divisions -->
+      <section id="divisions" class="chapter min-h-screen flex items-center justify-center">
+        <div class="content container mx-auto px-4">
+          <h2 class="text-4xl font-bold mb-4 text-center text-gold">Badan & Divisi</h2>
+          <div class="flex flex-wrap gap-4 justify-center">
+            <div class="w-full md:w-1/3 p-4">
+              <div class="h-full text-center p-6 border-2 border-gold rounded-lg" style="background:linear-gradient(135deg, #6d1a1a 0%, #a02c2c 100%);">
+                  <h5 class="text-xl font-bold text-gold">Divisi Akademik</h5>
+                  <p class="text-muted">Mendukung kegiatan akademik dan studi anggota.</p>
+              </div>
+            </div>
+            <div class="w-full md:w-1/3 p-4">
+              <div class="h-full text-center p-6 border-2 border-gold rounded-lg" style="background:linear-gradient(135deg, #6d1a1a 0%, #a02c2c 100%);">
+                  <h5 class="text-xl font-bold text-gold">Divisi Budaya & Sosial</h5>
+                  <p class="text-muted">Merencanakan event budaya, pentas, dan kegiatan sosial.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Chapter: Events & History -->
+      <section id="events" class="chapter min-h-screen flex items-center justify-center" style="background:linear-gradient(90deg, rgba(109,26,26,0.06), rgba(24,17,18,0.06));">
+        <div class="content container mx-auto text-center px-4">
+          <h2 class="text-4xl font-bold mb-4 text-gold">Event & Sejarah</h2>
+          <p class="text-muted">Dari gathering kecil hingga acara besar kampus — kami mencatat perjalanan Komando'45 dalam berbagai kegiatan sepanjang tahun.</p>
+            <div class="mt-4">
+                <!-- Horizontal gallery: on wide screens this section pins and scrolls horizontally; on small screens it falls back to normal vertical flow -->
+                <div class="horizontal-gallery">
+                  <div class="scroll-hint">Drag / scroll →</div>
+                  <div class="gallery-track">
+                    <div class="gallery-item bg-card-bg rounded-lg overflow-hidden">
+                      <img loading="lazy" src="static/images/angkringan_2025.webp" class="w-full h-64 object-cover" alt="Angkringan 2025">
+                      <div class="p-4 text-center"><h5 class="text-gold font-bold">Angkringan 2025</h5></div>
+                    </div>
+                    <div class="gallery-item bg-card-bg rounded-lg overflow-hidden">
+                      <img loading="lazy" src="static/images/komando_cup_2025.webp" class="w-full h-64 object-cover" alt="Komando Cup 2025">
+                      <div class="p-4 text-center"><h5 class="text-gold font-bold">Komando Cup 2025</h5></div>
+                    </div>
+                    <div class="gallery-item bg-card-bg rounded-lg overflow-hidden">
+                      <img loading="lazy" src="https://picsum.photos/seed/komando5/1400/900" class="w-full h-64 object-cover" alt="Kegiatan C">
+                      <div class="p-4 text-center"><h5 class="text-gold font-bold">Cultural Night</h5></div>
+                    </div>
+                    <div class="gallery-item bg-card-bg rounded-lg overflow-hidden">
+                      <img loading="lazy" src="https://picsum.photos/seed/komando6/1400/900" class="w-full h-64 object-cover" alt="Kegiatan D">
+                      <div class="p-4 text-center"><h5 class="text-gold font-bold">Community Gathering</h5></div>
+                    </div>
+                  </div>
+                  <!-- Progress indicator for the pinned horizontal gallery -->
+                  <div class="gallery-progress" aria-hidden="true">
+                    <div class="gallery-progress-bar"></div>
+                  </div>
+                  <!-- Desktop arrows -->
+                  <button class="gallery-arrow gallery-arrow-left" aria-hidden="true">‹</button>
+                  <button class="gallery-arrow gallery-arrow-right" aria-hidden="true">›</button>
+              </div>
+        </div>
+      </section>
+
+      <!-- Chapter: Pengurus (preview) -->
+      <section id="pengurus" class="chapter min-h-screen flex items-center justify-center">
+        <div class="content container mx-auto text-center px-4">
+          <h2 class="text-4xl font-bold mb-3 text-gold">Pengurus</h2>
+          <p class="text-muted">Kenali tim pengurus Komando'45. <a href="pengurus.html" class="text-gold hover:text-white">Lihat semua</a></p>
+        </div>
+      </section>
+    </main>
+
+    <footer class="text-center py-4 bg-gray-200 text-gray-800">
+      <div class="container mx-auto">&copy; 2025 Komando45 — Built with HTML + GSAP + Tailwind CSS</div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.2/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.29/bundled/lenis.min.js"></script>
+
+
+    <script src="static/js/main.js" defer></script>
+  </body>
+  </html>

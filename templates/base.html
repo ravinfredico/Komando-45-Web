@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{% block title %}Komando45 Site{% endblock %}</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+      <!-- Display font for bold headings (Oswald) -->
+      <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+  </head>
+  <body>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container">
+        <a class="navbar-brand" href="{{ url_for('index') }}">Komando45</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbars" aria-controls="navbars" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbars">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item"><a class="nav-link" href="{{ url_for('index') }}">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="{{ url_for('about') }}">About</a></li>
+            <li class="nav-item"><a class="nav-link" href="{{ url_for('events') }}">Events</a></li>
+            <li class="nav-item"><a class="nav-link" href="{{ url_for('contact') }}">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Chapters overlay (hidden by default) -->
+    <div id="chaptersOverlay" class="chapters-overlay" aria-hidden="true">
+      <div class="chapters-inner">
+        <div class="chapters-header d-flex justify-content-between align-items-center">
+          <h4 class="mb-0" style="color:var(--muted);">Select your chapter</h4>
+          <button id="closeChapters" class="btn btn-light">CLOSE</button>
+        </div>
+        <hr />
+        <nav class="chapters-list mt-4">
+          <ul class="list-unstyled">
+            <li data-target="#intro"><span class="chap-number">01</span> <button class="chapter-link">INTRODUCTION</button></li>
+            <li data-target="#what-we-do"><span class="chap-number">02</span> <button class="chapter-link">WHAT WE DO</button></li>
+            <li data-target="#divisions"><span class="chap-number">03</span> <button class="chapter-link">DIVISIONS</button></li>
+            <li data-target="#events"><span class="chap-number">04</span> <button class="chapter-link">EVENTS & HISTORY</button></li>
+            <li data-target="#pengurus"><span class="chap-number">05</span> <button class="chapter-link">PENGURUS</button></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+
+    <!-- Floating Chapters button (visible so user can open overlay) -->
+    <button id="openChapters" class="btn btn-dark chapters-toggle" aria-label="Open chapters">Chapters</button>
+
+    <main class="container my-5">
+      {% with messages = get_flashed_messages(with_categories=true) %}
+        {% if messages %}
+          {% for category, msg in messages %}
+            <div class="alert alert-{{ category }}">{{ msg }}</div>
+          {% endfor %}
+        {% endif %}
+      {% endwith %}
+
+      {% block content %}{% endblock %}
+    </main>
+
+    <!-- Site footer: multi-column like reference site -->
+    <footer class="site-footer py-5">
+      <div class="container d-flex flex-column flex-lg-row align-items-start justify-content-between">
+        <div class="footer-left mb-4 mb-lg-0">
+          <a class="navbar-brand d-inline-flex align-items-center" href="{{ url_for('index') }}">
+            <img src="{{ url_for('static', filename='images/Komando.svg') }}" alt="Komando45" style="height:48px;filter:drop-shadow(0 6px 24px rgba(109,26,26,0.18));">
+          </a>
+        </div>
+
+        <div class="footer-links d-flex gap-5 mx-auto">
+          <div class="col">
+            <ul class="list-unstyled">
+              <li><a href="{{ url_for('index') }}#intro">Introduction</a></li>
+              <li><a href="{{ url_for('index') }}#what-we-do">What We Do</a></li>
+              <li><a href="{{ url_for('pengurus') }}">Pengurus</a></li>
+            </ul>
+          </div>
+          <div class="col">
+            <ul class="list-unstyled">
+              <li><a href="{{ url_for('about') }}">About</a></li>
+              <li><a href="{{ url_for('contact') }}">Contact</a></li>
+              <li><a href="{{ url_for('blog') }}">Blog</a></li>
+            </ul>
+          </div>
+          <div class="col">
+            <ul class="list-unstyled">
+              <li><a href="#">Privacy Policy</a></li>
+              <li><a href="#">Terms</a></li>
+              <li><a href="https://university.taylors.edu.my/en/student-life/your-taylors-journey/clubs-societies-and-sports/international-clubs/komando-45.html" target="_blank" rel="noopener noreferrer">Official University Page</a></li>
+              <li><a href="#">Legal</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="footer-right text-lg-end">
+          <div class="socials mb-3">
+            <a href="https://www.instagram.com/komando45/" target="_blank" rel="noopener noreferrer" class="me-2">IG</a>
+            <a href="https://www.linkedin.com/company/ppi-taylor-s-university-komando45/" target="_blank" rel="noopener noreferrer" class="me-2">IN</a>
+            <a href="#" class="me-2">X</a>
+          </div>
+          <div class="copyright small">&copy; {{ (2025) }} Komando45 — All rights reserved</div>
+        </div>
+      </div>
+      <!-- bottom-left language links -->
+      <div class="container">
+        <div class="lang-switch d-flex gap-3 mt-3">
+          <button class="lang-btn" data-lang="en">EN</button>
+          <button class="lang-btn muted" data-lang="id">ID</button>
+          <button class="lang-btn muted" data-lang="fr">FR</button>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Scroll progress indicator (vertical) -->
+    <div id="scrollIndicator" class="scroll-indicator" aria-hidden="true">
+      <div class="scroll-track">
+        <div class="scroll-thumb" style="height:10%;"></div>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- GSAP for animations -->
+     <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.29/bundled/lenis.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/ScrollTrigger.min.js"></script>
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+  </body>
+  </html>
