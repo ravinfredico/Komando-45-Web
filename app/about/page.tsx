@@ -1,4 +1,4 @@
-'use client';
+﻿'use client';
 
 import { useEffect } from 'react';
 import { gsap } from 'gsap';
@@ -9,9 +9,30 @@ if (typeof window !== 'undefined') {
   gsap.registerPlugin(ScrollTrigger);
 }
 
+const executiveTeam = [
+  { name: 'Richard Anthony', role: 'President' },
+  { name: 'Nadya Liandre', role: 'Vice President' },
+  { name: 'Angelique Clarissa', role: 'Secretary' },
+  { name: 'Ravin Fredico', role: 'Treasurer' },
+];
+
+const departments = [
+  {
+    name: 'Event Department',
+    description: 'Departemen Event KOMANDO\'45 adalah divisi yang bertanggung jawab untuk merancang ide acara, menyusun proposal, mengurus seluruh kebutuhan pra-acara, serta memastikan pelaksanaan acara pada hari-H berjalan tertata, efektif, dan memberikan pengalaman terbaik bagi seluruh mahasiswa Indonesia yang ada di Taylor\'s University.',
+  },
+  {
+    name: 'Public Relations Department',
+    description: 'Public Relations KOMANDO\'45 adalah divisi yang bertugas membangun dan menjaga hubungan baik dengan pihak internal maupun eksternal, mengelola komunikasi resmi organisasi, serta memastikan citra KOMANDO\'45 tetap positif dan profesional. PR juga menangani media relations, publikasi, dan koordinasi dengan mitra, sponsor, serta komunitas mahasiswa.',
+  },
+  {
+    name: 'Marketing Department',
+    description: 'Departemen Marketing KOMANDO\'45 adalah divisi yang bertanggung jawab merancang strategi pemasaran, mengelola promosi acara, serta meningkatkan jangkauan dan visibilitas organisasi. Divisi ini memastikan setiap program dan kegiatan KOMANDO\'45 tersampaikan dengan efektif melalui konten kreatif dan komunikasi terarah di platform TikTok, YouTube, dan Instagram.',
+  },
+];
+
 export default function About() {
   useEffect(() => {
-    // Hero entrance animation
     gsap.from('.hero', { 
       y: 40, 
       opacity: 0, 
@@ -20,7 +41,6 @@ export default function About() {
       delay: 0.3
     });
 
-    // Card animations with scroll trigger
     const cardEls = gsap.utils.toArray('.card');
     cardEls.forEach((card: any) => {
       gsap.from(card, {
@@ -44,60 +64,63 @@ export default function About() {
         <div className="container mx-auto max-w-5xl">
           {/* Hero Section */}
           <section className="hero text-center mb-16">
-            <h1 className="text-5xl md:text-6xl font-bold mb-4 text-gold" style={{textShadow: '0 4px 32px #6d1a1a'}}>
-              Tentang Komando'45
+            <p className="text-lg text-gold mb-2 tracking-widest">GETTING TO KNOW</p>
+            <h1 className="text-4xl md:text-5xl font-bold mb-2 text-gold" style={{textShadow: '0 4px 32px #6d1a1a'}}>
+              PPI Malaysia in Taylor's University
             </h1>
-            <p className="text-lg text-muted max-w-3xl mx-auto">
-              Komando'45 adalah organisasi mahasiswa Indonesia di Taylor's University, Malaysia.
-              Kami berkomitmen untuk menjadi wadah bagi mahasiswa Indonesia untuk berinteraksi, 
-              berkolaborasi, dan berkontribusi.
+            <p className="text-2xl font-semibold text-muted">
+              KOMANDO'45 25/26
+            </p>
+            <p className="text-lg text-gold mt-2 italic">
+              ABIMANYU-SAKHYABANDHA
             </p>
           </section>
 
-          {/* History Section */}
+          {/* About Section */}
           <section className="card mb-8 p-8 border-2 border-gold rounded-lg" 
             style={{background: 'linear-gradient(135deg, #6d1a1a 0%, #a02c2c 100%)'}}>
-            <h2 className="text-3xl font-bold mb-4 text-gold">Sejarah Kami</h2>
+            <h2 className="text-3xl font-bold mb-4 text-gold">Halo, Kami KOMANDO'45!</h2>
+            <p className="text-muted leading-relaxed mb-4">
+              Komando'45 adalah Perhimpunan Pelajar Indonesia (PPI) di Taylor's University. 
+              Nama organisasi kami berasal dari singkatan dari <strong className="text-gold">Komunitas Mahasiswa Indonesia dengan Semangat '45</strong>.
+            </p>
             <p className="text-muted leading-relaxed">
-              Didirikan pada tahun 2020, Komando'45 telah menjadi rumah bagi ratusan mahasiswa Indonesia 
-              di Taylor's University. Nama "Komando'45" terinspirasi dari semangat kemerdekaan Indonesia 
-              tahun 1945, yang mencerminkan dedikasi kami untuk membangun komunitas yang kuat dan berdaya.
+              Berdiri sejak <strong className="text-gold">2012</strong>, organisasi ini menjadi wadah resmi bagi mahasiswa Indonesia 
+              untuk berkegiatan, berorganisasi, dan mengembangkan diri di lingkungan Taylor's University.
             </p>
           </section>
 
-          {/* Mission Section */}
+          {/* Executive Committee Section */}
           <section className="card mb-8 p-8 border-2 border-gold rounded-lg" 
             style={{background: 'linear-gradient(135deg, #6d1a1a 0%, #a02c2c 100%)'}}>
-            <h2 className="text-3xl font-bold mb-4 text-gold">Misi Kami</h2>
-            <ul className="list-disc list-inside text-muted space-y-2 leading-relaxed">
-              <li>Memfasilitasi kegiatan akademik yang mendukung prestasi mahasiswa</li>
-              <li>Menyelenggarakan event budaya yang memperkuat identitas Indonesia</li>
-              <li>Membangun jaringan profesional untuk pengembangan karir</li>
-              <li>Menciptakan lingkungan yang inklusif dan mendukung</li>
-            </ul>
+            <h2 className="text-3xl font-bold mb-6 text-gold text-center">Executive Committee</h2>
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+              {executiveTeam.map((member) => (
+                <div key={member.name} className="text-center">
+                  <div className="w-20 h-20 mx-auto mb-3 rounded-full bg-gold/20 flex items-center justify-center">
+                    <span className="text-2xl text-gold">{member.name.charAt(0)}</span>
+                  </div>
+                  <h3 className="text-lg font-bold text-gold">{member.name}</h3>
+                  <p className="text-muted text-sm">{member.role}</p>
+                </div>
+              ))}
+            </div>
           </section>
 
-          {/* Values Section */}
-          <section className="card mb-8 p-8 border-2 border-gold rounded-lg" 
-            style={{background: 'linear-gradient(135deg, #6d1a1a 0%, #a02c2c 100%)'}}>
-            <h2 className="text-3xl font-bold mb-4 text-gold">Nilai-Nilai Kami</h2>
-            <div className="grid md:grid-cols-2 gap-6">
-              <div>
-                <h3 className="text-xl font-bold text-gold mb-2">Kolaborasi</h3>
-                <p className="text-muted">Bekerja sama untuk mencapai tujuan bersama</p>
-              </div>
-              <div>
-                <h3 className="text-xl font-bold text-gold mb-2">Inovasi</h3>
-                <p className="text-muted">Mendorong kreativitas dan pemikiran baru</p>
-              </div>
-              <div>
-                <h3 className="text-xl font-bold text-gold mb-2">Integritas</h3>
-                <p className="text-muted">Berpegang pada prinsip dan kejujuran</p>
-              </div>
-              <div>
-                <h3 className="text-xl font-bold text-gold mb-2">Keberagaman</h3>
-                <p className="text-muted">Menghargai perbedaan dan perspektif</p>
-              </div>
+          {/* Departments Section */}
+          <section className="mb-8">
+            <h2 className="text-3xl font-bold mb-6 text-gold text-center">Our Departments</h2>
+            <div className="space-y-6">
+              {departments.map((dept) => (
+                <div 
+                  key={dept.name}
+                  className="card p-8 border-2 border-gold rounded-lg" 
+                  style={{background: 'linear-gradient(135deg, #6d1a1a 0%, #a02c2c 100%)'}}
+                >
+                  <h3 className="text-2xl font-bold mb-4 text-gold">{dept.name}</h3>
+                  <p className="text-muted leading-relaxed">{dept.description}</p>
+                </div>
+              ))}
             </div>
           </section>
 
@@ -110,7 +133,7 @@ export default function About() {
             </p>
             <a 
               href="/contact" 
-              className="inline-block px-8 py-3 text-lg font-semibold text-gold border-2 border-gold hover:bg-gold hover:text-primary transition-all"
+              className="inline-block px-8 py-3 text-lg font-semibold text-gold border-2 border-gold hover:bg-gold hover:text-primary transition-all rounded"
             >
               Hubungi Kami
             </a>
@@ -121,7 +144,7 @@ export default function About() {
       {/* Footer */}
       <footer className="bg-gradient-to-r from-primary to-primary-dark py-4 text-center">
         <div className="container mx-auto">
-          &copy; 2025 Komando45 — Built with Next.js + React + GSAP + Tailwind CSS
+          &copy; 2025 Komando'45  Built with Next.js + React + GSAP + Tailwind CSS
         </div>
       </footer>
     </>
