@@ -227,23 +227,6 @@
   position: absolute;
   left: 50%;
   top: 48%;
-  tPreloader styles */
-.preloader {
-  position: fixed;
-  inset: 0;
-  background: linear-gradient(180deg, rgba(109,26,26,0.97), rgba(160,44,44,0.97) 60%, rgba(24,17,18,0.98) 100%);
-  display: none; /* hidden by default; enabled via .preload-ready on <body> */
-  align-items: center;
-  justify-content: center;
-  z-index: 100000; /* high so it fully overlays everything while playing */
-}
-.preload-ready .preloader { display: flex; }
-
-/* Splash text inside preloader: large, bold and italic, animated horizontally */
-.preloader .splash-text {
-  position: absolute;
-  left: 50%;
-  top: 48%;
   transform: translate(-50%, -50%);
   color: var(--gold);
   font-weight: 800;
