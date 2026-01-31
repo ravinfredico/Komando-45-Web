@@ -151,7 +151,7 @@ export default function Home() {
         style={{ top: "24px", right: "24px" }}
       >
         <img
-          src="/images/Komando.svg"
+          src="images/Komando.svg"
           alt="KOMANDO'45 Logo"
           style={{ width: "40px", height: "40px" }}
         />
@@ -246,7 +246,7 @@ export default function Home() {
 
         {/* Background Image using img tag for better loading */}
         <img
-          src="/images/hero-bg.jpg"
+          src="images/hero-bg.jpg"
           alt="KOMANDO'45 Background"
           className="absolute inset-0 w-full h-full object-cover"
         />
@@ -367,7 +367,7 @@ export default function Home() {
           <div className="flex-1 min-w-[320px] flex flex-col items-center justify-center">
             <div className="relative w-full rounded-3xl overflow-hidden aspect-video shadow-2xl mb-8">
               <img
-                src="/images/komandocup2025/komandocup2025.jpg"
+                src="images/komandocup2025/komandocup2025.jpg"
                 alt="Komando Cup 2025 Poster"
                 className="w-full h-full object-cover scale-105"
               />
@@ -466,7 +466,7 @@ export default function Home() {
                           style={{ width: "200px", height: "200px" }}
                         >
                           <img
-                            src={`/images/komandocup2025/${img}`}
+                            src={`images/komandocup2025/${img}`}
                             alt={`Komando Cup 2025 Documentation ${idx + 1}`}
                             className="w-full h-full object-cover"
                           />
