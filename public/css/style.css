@@ -1,3 +1,10 @@
+/* ========================= */
+/*   BUTTON UTILITIES        */
+/* ========================= */
+.btn-no-outline {
+  outline: none !important;
+  box-shadow: none !important;
+}
 .navbar {
   min-height: 64px;
   padding-top: 8px;
@@ -27,6 +34,10 @@
   }
 }
 /* Import Poppins font for navbar animation */
+
+/* ========================= */
+/*  FONT IMPORTS & VARIABLES */
+/* ========================= */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700;900&display=swap');
 
 /* Dark red/gold navbar theme */
@@ -34,34 +45,37 @@
   background: linear-gradient(90deg, var(--primary) 0%, var(--primary-dark) 100%) !important;
   color: var(--gold) !important;
   box-shadow: 0 2px 16px 0 rgba(160,44,44,0.10);
+/* ========================= */
+/*         NAVBAR            */
+/* ========================= */
+.navbar {
+  min-height: 64px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  box-sizing: border-box;
 }
-.navbar-dark .navbar-nav .nav-link {
-  color: var(--gold) !important;
-  font-weight: 600;
-  letter-spacing: 0.04em;
-}
-.navbar-dark .navbar-nav .nav-link.active, .navbar-dark .navbar-nav .nav-link:focus, .navbar-dark .navbar-nav .nav-link:hover {
-  color: #fff !important;
-  text-shadow: 0 2px 8px #a02c2c;
-}
-.navbar-dark .navbar-brand {
-  color: var(--gold) !important;
-  font-weight: 700;
-  font-size: 1.3rem;
-  letter-spacing: 0.08em;
-  display: flex;
+.navbar-brand {
   align-items: center;
+  display: flex;
   gap: 0.5rem;
+  min-height: 48px;
+  padding-top: 0;
+  padding-bottom: 0;
 }
 .navbar-logo-anim {
-  max-height: 38px;
-  transition: opacity 0.4s, transform 0.4s;
+  max-height: 44px;
+  vertical-align: middle;
 }
-.navbar-text-anim {
-  font-family: 'Poppins', 'Oswald', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
-  font-size: 2rem;
-  font-weight: 900;
-  font-style: italic;
+@media (max-width: 576px) {
+  .navbar {
+    min-height: 48px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+  }
+  .navbar-logo-anim {
+    max-height: 28px;
+  }
+}
   color: var(--gold);
   letter-spacing: 0.08em;
   text-shadow: 0 2px 12px #6d1a1a;
@@ -73,7 +87,9 @@
   .navbar-text-anim { font-size: 1.2rem; }
   .navbar-logo-anim { max-height: 28px; }
 }
-/* Modern Navbar Styles */
+/* ========================= */
+/*     MODERN NAVBAR         */
+/* ========================= */
 .modern-navbar {
   width: 100%;
   background: #f5f4ef;
@@ -200,7 +216,9 @@
   .navbar-logo { height: 22px; }
   .navbar-submit { padding: 5px 10px; font-size: 0.9rem; }
 }
-/* Theme variables (dark red) */
+/* ========================= */
+/*        THEME COLORS        */
+/* ========================= */
 :root {
   --primary: #6d1a1a; /* deep red */
   --primary-dark: #a02c2c; /* burgundy */
@@ -210,7 +228,9 @@
   --muted: #f5e9e0; /* off-white */
 }
 
-/* Preloader styles */
+/* ========================= */
+/*         PRELOADER          */
+/* ========================= */
 .preloader {
   position: fixed;
   inset: 0;
