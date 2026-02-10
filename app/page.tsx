@@ -322,7 +322,7 @@ export default function Home() {
       </section>
 
       {/* ==================== EVENTS INTRO SECTION ==================== */}
-      <section className="section min-h-screen flex items-center justify-center bg-black relative overflow-hidden">
+      <section className="section min-h-[60vh] flex items-center justify-center bg-black relative overflow-hidden">
         {/* Large background text */}
         <div
           className="absolute inset-0 flex items-center justify-center opacity-5 pointer-events-none"
@@ -374,7 +374,7 @@ export default function Home() {
               <div className="absolute inset-0 bg-gradient-to-br from-black/90 via-black/60 to-red-900/60" />
             </div>
             {/* Title with shadow background */}
-            <div className="relative w-full flex flex-col items-center justify-center mb-2">
+            <div className="relative min-h-[25vh] w-full flex flex-col items-center justify-center mb-2">
               <div
                 className="absolute inset-0 flex items-center justify-center opacity-5 pointer-events-none select-none"
                 style={{
@@ -427,11 +427,11 @@ export default function Home() {
               <div className="mt-8 flex justify-center items-center gap-4 mb-4 ">
                 <div className="flex flex-col md:flex-row gap-6 items-center justify-center w-full">
                   {/* Aftermovie (left) */}
-                  <div style={{ maxWidth: "500px", width: "200%" }}>
+                  <div style={{ maxWidth: "400px", width: "200%" }}>
                     <iframe
                       src="https://www.youtube.com/embed/WfCz-laE1rw?list=PLf2Og0QW9vsLPMRSXGHnMvOCyKYhF0kAD&index=3"
                       title="Komando Cup 2025 Aftermovie"
-                      className="w-full aspect-video min-h-[200px]"
+                      className="w-full aspect-video min-h-[200px] "
                       style={{ border: "none" }}
                       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                       allowFullScreen
@@ -500,46 +500,244 @@ export default function Home() {
       </section>
 
       {/* ==================== VISION & MISSION ==================== */}
-      <section id="vision" className="section mb-20">
-  <h2
-    className="text-4xl md:text-5xl font-bold mb-12 text-center text-white tracking-tight animate-fadein"
-    style={{ fontFamily: "Poppins, sans-serif", letterSpacing: "-0.02em" }}
-  >
-    Visi & Misi
-  </h2>
-  <div className="relative flex flex-col md:flex-row gap-0 justify-center items-stretch animate-fadein" style={{ animationDelay: "0.2s", animationDuration: "1.2s" }}>
-    <div className="flex-1 flex flex-col items-center px-4 md:px-12">
-      <h3 className="text-2xl font-bold mb-6 text-yellow-200 tracking-widest uppercase animate-fadein" style={{ fontFamily: 'Oswald, Poppins, sans-serif', letterSpacing: '0.12em' }}>Visi</h3>
-      <p className="text-lg text-center text-white/90 leading-relaxed animate-fadein" style={{ fontFamily: 'Montserrat, Poppins, sans-serif', fontWeight: 400 }}>
-        Mewujudkan Komando’45 sebagai rumah persaudaraan yang kokoh dan wadah generasi muda yang berani, idealis, serta tulus dengan citra positif, pencapaian nyata, dan legacy bermanfaat bagi anggota dan komunitas.
-      </p>
-    </div>
-    {/* Vertical Divider for desktop */}
-    <div className="hidden md:flex items-center" aria-hidden="true">
-      <div className="h-40 border-l border-zinc-600 mx-8"></div>
-    </div>
-    <div className="flex-1 flex flex-col items-center px-4 md:px-12">
-      <h3 className="text-2xl font-bold mb-6 text-red-200 tracking-widest uppercase animate-fadein" style={{ fontFamily: 'Oswald, Poppins, sans-serif', letterSpacing: '0.12em' }}>Misi</h3>
-      <ul className="text-lg text-white/90 space-y-2 list-inside list-decimal animate-fadein" style={{ fontFamily: 'Montserrat, Poppins, sans-serif', fontWeight: 400 }}>
-        <li>Meneguhkan keberanian dan ketulusan</li>
-        <li>Memperkuat persaudaraan dan kebersamaan</li>
-        <li>Mewariskan legacy yang bermakna</li>
-      </ul>
-    </div>
-  </div>
-</section>
-
-      {/* ==================== ABOUT SECTION ==================== */}
-      <section id="about" className="section mb-20">
-        <p
-          className="text-lg md:text-xl tracking-widest mb-4 text-center text-yellow-300 font-bold uppercase animate-fadein"
+      <section className="section min-h-[30vh] flex items-center justify-center bg-black relative overflow-hidden">
+        {/* Large background text */}
+        <div
+          className="absolute inset-0 flex items-center justify-center opacity-5 pointer-events-none"
           style={{
-            fontFamily: "Oswald, Poppins, sans-serif",
-            letterSpacing: "0.18em",
+            fontSize: "10vw",
+            fontWeight: "800",
+            fontFamily: "'Poppins', sans-serif",
           }}
         >
-          Getting to Know
-        </p>
+          VISION & MISSION
+        </div>
+
+        {/* Main content */}
+        <div className="relative z-10 text-center px-6">
+          <p className="text-sm uppercase tracking-[0.3em] mb-4 opacity-60">
+            What we stand for
+          </p>
+          <h2
+            className="text-6xl md:text-8xl lg:text-9xl font-black uppercase tracking-tighter mb-6"
+            style={{
+              fontFamily: "'Poppins', sans-serif",
+              fontStyle: "italic",
+            }}
+          >
+            VISION & MISSION
+          </h2>
+          <p className="text-lg md:text-xl max-w-2xl mx-auto opacity-80 mb-8">
+            Our vision is to be a strong brotherhood and a platform for young
+          </p>
+        </div>
+      </section>
+      <section id="vision-mission" className="section py-20 px-6">
+        <div className="max-w-6xl mx-auto">
+
+          <div className="grid md:grid-cols-2 gap-4 mb-16">
+            {/* Vision Card */}
+            <div className="group bg-zinc-800/80 rounded-3xl p-8 transition-all duration-300 hover:-translate-y-1 hover:bg-zinc-700/80">
+              <div className="flex items-center gap-4 mb-6">
+                <div className="w-14 h-14 bg-yellow-500/20 rounded-2xl flex items-center justify-center">
+                  <svg
+                    className="w-7 h-7 text-yellow-400"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"
+                    />
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"
+                    />
+                  </svg>
+                </div>
+                <h3
+                  className="text-2xl font-bold text-yellow-300 tracking-wide uppercase"
+                  style={{ fontFamily: "Oswald, Poppins, sans-serif" }}
+                >
+                  Visi
+                </h3>
+              </div>
+              <p
+                className="text-lg text-white/85 leading-relaxed"
+                style={{ fontFamily: "Montserrat, Poppins, sans-serif" }}
+              >
+                Mewujudkan Komando'45 sebagai{" "}
+                <span className="text-yellow-300 font-semibold">
+                  rumah persaudaraan yang kokoh
+                </span>{" "}
+                dan wadah generasi muda yang berani, idealis, serta tulus dengan
+                citra positif, pencapaian nyata, dan legacy bermanfaat bagi
+                anggota dan komunitas.
+              </p>
+            </div>
+
+            {/* Mission Card */}
+            <div className="group bg-zinc-800/80 rounded-3xl p-8 transition-all duration-300 hover:-translate-y-1 hover:bg-zinc-700/80">
+              <div className="flex items-center gap-4 mb-6">
+                <div className="w-14 h-14 bg-red-500/20 rounded-2xl flex items-center justify-center">
+                  <svg
+                    className="w-7 h-7 text-red-400"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M13 10V3L4 14h7v7l9-11h-7z"
+                    />
+                  </svg>
+                </div>
+                <h3
+                  className="text-2xl font-bold text-red-300 tracking-wide uppercase"
+                  style={{ fontFamily: "Oswald, Poppins, sans-serif" }}
+                >
+                  Misi
+                </h3>
+              </div>
+              <ul className="space-y-4">
+                {[
+                  { icon: "🔥", text: "Meneguhkan keberanian dan ketulusan" },
+                  {
+                    icon: "🤝",
+                    text: "Memperkuat persaudaraan dan kebersamaan",
+                  },
+                  { icon: "🏆", text: "Mewariskan legacy yang bermakna" },
+                ].map((item, idx) => (
+                  <li
+                    key={idx}
+                    className="flex items-start gap-3 text-lg text-white/85"
+                    style={{ fontFamily: "Montserrat, Poppins, sans-serif" }}
+                  >
+                    <span className="text-xl">{item.icon}</span>
+                    <span>{item.text}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+
+          {/* Core Values */}
+          <div className="mt-16">
+            <h3
+              className="text-2xl font-bold text-center text-white mb-10"
+              style={{ fontFamily: "Poppins, sans-serif" }}
+            >
+              Nilai-Nilai Kami
+            </h3>
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 shadow-lg">
+              {[
+                {
+                  title: "Keberanian",
+                  desc: "Berani mengambil langkah",
+                  icon: "💪",
+                },
+                {
+                  title: "Ketulusan",
+                  desc: "Tulus dalam setiap aksi",
+                  icon: "❤️",
+                },
+                {
+                  title: "Persaudaraan",
+                  desc: "Satu keluarga Indonesia",
+                  icon: "🇮🇩",
+                },
+                { title: "Inovasi", desc: "Terus berkembang", icon: "💡" },
+              ].map((value, idx) => (
+                <div
+                  key={idx}
+                  className="bg-zinc-800/80 rounded-3xl p-8 text-center transition-all duration-300 hover:-translate-y-1 hover:bg-zinc-700/80"
+                >
+                  <div className="text-4xl mb-4">{value.icon}</div>
+                  <h4
+                    className="font-bold text-white mb-2"
+                    style={{ fontFamily: "Poppins, sans-serif" }}
+                  >
+                    {value.title}
+                  </h4>
+                  <p className="text-sm text-white/60">{value.desc}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ==================== STATISTICS SECTION ==================== */}
+      <section className="section py-20 bg-gradient-to-b from-zinc-900 to-black">
+        <div className="max-w-6xl mx-auto px-6">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+            {[
+              { number: "13+", label: "Years Active", desc: "Since 2012" },
+              { number: "200+", label: "Active Members", desc: "And growing" },
+              { number: "50+", label: "Events Held", desc: "Every year" },
+              { number: "4", label: "Departments", desc: "Working together" },
+            ].map((stat, idx) => (
+              <div
+                key={idx}
+                className="bg-zinc-800/80 rounded-3xl p-6 text-center group transition-all duration-300 hover:-translate-y-1 hover:bg-zinc-700/80"
+              >
+                <div
+                  className="text-4xl md:text-5xl font-black bg-gradient-to-r from-red-400 via-yellow-300 to-red-400 bg-clip-text text-transparent mb-2 group-hover:scale-110 transition-transform duration-300"
+                  style={{ fontFamily: "Poppins, sans-serif" }}
+                >
+                  {stat.number}
+                </div>
+                <div className="text-base font-semibold text-white mb-1">
+                  {stat.label}
+                </div>
+                <div className="text-sm text-white/50">{stat.desc}</div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ==================== ABOUT SECTION ==================== */}
+      <section className="section min-h-[30vh] flex items-center justify-center bg-black relative overflow-hidden">
+        {/* Large background text */}
+        <div
+          className="absolute inset-0 flex items-center justify-center opacity-5 pointer-events-none"
+          style={{
+            fontSize: "10vw",
+            fontWeight: "800",
+            fontFamily: "'Poppins', sans-serif",
+          }}
+        >
+          GETTING TO KNOW
+        </div>
+
+        {/* Main content */}
+        <div className="relative z-10 text-center px-6">
+          <p className="text-sm uppercase tracking-[0.3em] mb-4 opacity-60">
+            Who we are
+          </p>
+          <h2
+            className="text-6xl md:text-8xl lg:text-9xl font-black uppercase tracking-tighter mb-6"
+            style={{
+              fontFamily: "'Poppins', sans-serif",
+              fontStyle: "italic",
+            }}
+          >
+            KOMANDO'45
+          </h2>
+          <p className="text-lg md:text-xl max-w-2xl mx-auto opacity-80 mb-8">
+            Learn more about our journey, values, and the community we build
+          </p>
+        </div>
+      </section>
+      <section id="about">
         <h2
           className="text-5xl md:text-6xl font-black mb-3 text-center bg-gradient-to-r from-yellow-300 via-red-400 to-pink-500 bg-clip-text text-transparent drop-shadow-lg animate-fadein"
           style={{
@@ -599,6 +797,286 @@ export default function Home() {
           </p>
         </div>
       </section>
+
+      {/* ==================== TEAM SECTION ==================== */}
+      <section className="section min-h-[30vh] flex items-center justify-center bg-black relative overflow-hidden">
+        {/* Large background text */}
+        <div
+          className="absolute inset-0 flex items-center justify-center opacity-5 pointer-events-none"
+          style={{
+            fontSize: "10vw",
+            fontWeight: "800",
+            fontFamily: "'Poppins', sans-serif",
+          }}
+        >
+          OUR LEADERSHIP
+        </div>
+
+        {/* Main content */}
+        <div className="relative z-10 text-center px-6">
+          <p className="text-sm uppercase tracking-[0.3em] mb-4 opacity-60">
+            Executive Team
+          </p>
+          <h2
+            className="text-6xl md:text-8xl lg:text-9xl font-black uppercase tracking-tighter mb-6"
+            style={{
+              fontFamily: "'Poppins', sans-serif",
+              fontStyle: "italic",
+            }}
+          >
+            KOMANDO'45
+          </h2>
+          <p className="text-lg md:text-xl max-w-2xl mx-auto opacity-80 mb-8">
+            Meet the dedicated leaders driving KOMANDO'45 forward
+          </p>
+        </div>
+      </section>
+      
+
+      {/* ==================== DEPARTMENTS SECTION ==================== */}
+      <section className="section min-h-[30vh] flex items-center justify-center bg-black relative overflow-hidden">
+        {/* Large background text */}
+        <div
+          className="absolute inset-0 flex items-center justify-center opacity-5 pointer-events-none"
+          style={{
+            fontSize: "10vw",
+            fontWeight: "800",
+            fontFamily: "'Poppins', sans-serif",
+          }}
+        >
+          HOW WE OPERATE
+        </div>
+
+        {/* Main content */}
+        <div className="relative z-10 text-center px-6">
+          <p className="text-sm uppercase tracking-[0.3em] mb-4 opacity-60">
+            Our Departments
+          </p>
+          <h2
+            className="text-6xl md:text-8xl lg:text-9xl font-black uppercase tracking-tighter mb-6"
+            style={{
+              fontFamily: "'Poppins', sans-serif",
+              fontStyle: "italic",
+            }}
+          >
+            KOMANDO'45
+          </h2>
+          <p className="text-lg md:text-xl max-w-2xl mx-auto opacity-80 mb-8">
+            Four specialized teams working together to create impactful experiences
+          </p>
+        </div>
+      </section>
+      <section id="departments" className="section py-20 px-6">
+          <div className="grid md:grid-cols-2 gap-4">
+            {departments.map((dept, idx) => (
+              <div
+                key={idx}
+                className="group bg-zinc-800/80 rounded-3xl p-8 transition-all duration-300 hover:-translate-y-1 hover:bg-zinc-700/80"
+              >
+                <div className="flex items-center gap-4 mb-6">
+                  <div className="w-14 h-14 bg-gradient-to-br from-red-600 to-red-400 rounded-2xl flex items-center justify-center text-2xl font-bold text-white shadow-lg">
+                    {idx + 1}
+                  </div>
+                  <h3
+                    className="text-xl font-bold text-white"
+                    style={{ fontFamily: "Poppins, sans-serif" }}
+                  >
+                    {dept.name}
+                  </h3>
+                </div>
+                <p className="text-white/70 leading-relaxed text-sm">
+                  {dept.description}
+                </p>
+              </div>
+            ))}
+          </div>
+      </section>
+
+      {/* ==================== CONTACT SECTION ==================== */}
+      <section
+        id="contact"
+        className="section py-20 px-6 bg-gradient-to-b from-zinc-900 to-black"
+      >
+        <div className="max-w-4xl mx-auto">
+          <p className="text-sm uppercase tracking-[0.3em] mb-4 opacity-60 text-center">
+            Get in Touch
+          </p>
+          <h2
+            className="text-4xl md:text-6xl font-black mb-4 text-center text-white tracking-tight"
+            style={{
+              fontFamily: "Poppins, sans-serif",
+              letterSpacing: "-0.02em",
+            }}
+          >
+            Contact Us
+          </h2>
+          <p className="text-lg text-white/70 text-center mb-16 max-w-2xl mx-auto">
+            Have questions or want to join? We'd love to hear from you!
+          </p>
+
+          <div className="grid md:grid-cols-2 gap-4">
+            {/* Contact Info */}
+            <div className="space-y-8">
+              <div className="bg-zinc-800/80 rounded-3xl p-8">
+                <h3
+                  className="text-xl font-bold text-white mb-6"
+                  style={{ fontFamily: "Poppins, sans-serif" }}
+                >
+                  Connect With Us
+                </h3>
+                <div className="space-y-4">
+                  <a
+                    href="mailto:komando45taylors@gmail.com"
+                    className="flex items-center gap-4 text-white/80 hover:text-red-400 transition-colors"
+                  >
+                    <div className="w-10 h-10 bg-red-500/20 rounded-xl flex items-center justify-center">
+                      <svg
+                        className="w-5 h-5 text-red-400"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth={2}
+                          d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+                        />
+                      </svg>
+                    </div>
+                    <span>komando45taylors@gmail.com</span>
+                  </a>
+                  <a
+                    href="https://instagram.com/komando45"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-4 text-white/80 hover:text-pink-400 transition-colors"
+                  >
+                    <div className="w-10 h-10 bg-pink-500/20 rounded-xl flex items-center justify-center">
+                      <svg
+                        className="w-5 h-5 text-pink-400"
+                        fill="currentColor"
+                        viewBox="0 0 24 24"
+                      >
+                        <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
+                      </svg>
+                    </div>
+                    <span>@komando45</span>
+                  </a>
+                  <div className="flex items-center gap-4 text-white/80">
+                    <div className="w-10 h-10 bg-blue-500/20 rounded-xl flex items-center justify-center">
+                      <svg
+                        className="w-5 h-5 text-blue-400"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth={2}
+                          d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"
+                        />
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth={2}
+                          d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
+                        />
+                      </svg>
+                    </div>
+                    <span>Taylor's University, Malaysia</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Contact Form */}
+            <form
+              action="https://formsubmit.co/komando45taylors@gmail.com"
+              method="POST"
+              onSubmit={handleSubmit}
+              className="bg-zinc-800/80 rounded-3xl p-8"
+            >
+              <input
+                type="hidden"
+                name="_next"
+                value="https://komando45.org/thank-you"
+              />
+              <input
+                type="hidden"
+                name="_subject"
+                value="New Contact from KOMANDO'45 Website"
+              />
+
+              <div className="space-y-6">
+                <div>
+                  <label
+                    htmlFor="name"
+                    className="block text-sm font-medium text-white/80 mb-2"
+                  >
+                    Name
+                  </label>
+                  <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    value={formData.name}
+                    onChange={handleChange}
+                    required
+                    className="w-full px-4 py-3 bg-zinc-900/50 border border-zinc-700 rounded-xl text-white placeholder-white/40 focus:outline-none focus:border-red-500 transition-colors"
+                    placeholder="Your name"
+                  />
+                </div>
+                <div>
+                  <label
+                    htmlFor="email"
+                    className="block text-sm font-medium text-white/80 mb-2"
+                  >
+                    Email
+                  </label>
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    value={formData.email}
+                    onChange={handleChange}
+                    required
+                    className="w-full px-4 py-3 bg-zinc-900/50 border border-zinc-700 rounded-xl text-white placeholder-white/40 focus:outline-none focus:border-red-500 transition-colors"
+                    placeholder="your@email.com"
+                  />
+                </div>
+                <div>
+                  <label
+                    htmlFor="message"
+                    className="block text-sm font-medium text-white/80 mb-2"
+                  >
+                    Message
+                  </label>
+                  <textarea
+                    id="message"
+                    name="message"
+                    value={formData.message}
+                    onChange={handleChange}
+                    required
+                    rows={4}
+                    className="w-full px-4 py-3 bg-zinc-900/50 border border-zinc-700 rounded-xl text-white placeholder-white/40 focus:outline-none focus:border-red-500 transition-colors resize-none"
+                    placeholder="Your message..."
+                  />
+                </div>
+                <button
+                  type="submit"
+                  className="w-full py-4 bg-gradient-to-r from-red-600 to-red-500 hover:from-red-500 hover:to-red-400 text-white font-bold rounded-xl transition-all duration-300 hover:scale-[1.02] focus:outline-none"
+                  style={{ fontFamily: "Poppins, sans-serif" }}
+                >
+                  Send Message
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
+
       {/* Scroll indicator */}
       <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce opacity-50">
         <svg
@@ -637,31 +1115,3 @@ export default function Home() {
     </main>
   );
 }
-<section id="vision" className="section mb-20">
-  <h2
-    className="text-4xl md:text-5xl font-bold mb-12 text-center text-white tracking-tight animate-fadein"
-    style={{ fontFamily: "Poppins, sans-serif", letterSpacing: "-0.02em" }}
-  >
-    Visi & Misi
-  </h2>
-  <div className="relative flex flex-col md:flex-row gap-0 justify-center items-stretch animate-fadein" style={{ animationDelay: "0.2s", animationDuration: "1.2s" }}>
-    <div className="flex-1 flex flex-col items-center px-4 md:px-12">
-      <h3 className="text-2xl font-bold mb-6 text-yellow-200 tracking-widest uppercase animate-fadein" style={{ fontFamily: 'Oswald, Poppins, sans-serif', letterSpacing: '0.12em' }}>Visi</h3>
-      <p className="text-lg text-center text-white/90 leading-relaxed animate-fadein" style={{ fontFamily: 'Montserrat, Poppins, sans-serif', fontWeight: 400 }}>
-        Mewujudkan Komando’45 sebagai rumah persaudaraan yang kokoh dan wadah generasi muda yang berani, idealis, serta tulus dengan citra positif, pencapaian nyata, dan legacy bermanfaat bagi anggota dan komunitas.
-      </p>
-    </div>
-    {/* Vertical Divider for desktop */}
-    <div className="hidden md:flex items-center" aria-hidden="true">
-      <div className="h-40 border-l border-zinc-600 mx-8"></div>
-    </div>
-    <div className="flex-1 flex flex-col items-center px-4 md:px-12">
-      <h3 className="text-2xl font-bold mb-6 text-red-200 tracking-widest uppercase animate-fadein" style={{ fontFamily: 'Oswald, Poppins, sans-serif', letterSpacing: '0.12em' }}>Misi</h3>
-      <ul className="text-lg text-white/90 space-y-2 list-inside list-decimal animate-fadein" style={{ fontFamily: 'Montserrat, Poppins, sans-serif', fontWeight: 400 }}>
-        <li>Meneguhkan keberanian dan ketulusan</li>
-        <li>Memperkuat persaudaraan dan kebersamaan</li>
-        <li>Mewariskan legacy yang bermakna</li>
-      </ul>
-    </div>
-  </div>
-</section>
